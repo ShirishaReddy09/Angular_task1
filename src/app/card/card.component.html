@@ -1,0 +1,27 @@
+<div class="card mb-5 mb-lg-0">
+    <div class="card-body">
+     <h6 class="card-title text-muted text-uppercase text-center">{{myData.type}}</h6>
+      <h2 class="card-price text-center">{{myData.title}}<sub style="font-size: small;">{{myData.sub}}</sub></h2>
+      <hr>
+      <ul class="fa-ul">
+        <li><i class=" fa-li fa fa-check"></i>{{myData.users}}</li>
+        <li><i class="fa-li fa fa-check"></i>{{myData.storage}}</li>
+        <li><i class="fa-li  fa fa-check"></i>{{myData.public_projects[0]}}</li>
+        <li><i class="fa-li fa fa-check"></i>{{myData.access}}</li>
+        <li *ngIf="myData.private_projects[1]"><i class=" fa-li fa fa-check"></i>{{myData.private_projects[0]}}</li>
+        <li class="text-muted" *ngIf="!myData.private_projects[1]"><i class="fa-li fa fa-times"></i>{{myData.private_projects[0]}}</li>
+        <li *ngIf="myData.phone_support[1]"><i class="fa-li fa fa-check"></i>{{myData.phone_support[0]}}</li>
+        <li class="text-muted" *ngIf="!myData.phone_support[1]"><i class="fa-li fa fa-times"></i>{{myData.phone_support[0]}}</li>
+        <li *ngIf="myData.subdomain[1]" ><i class="fa-li fa fa-check"></i>{{myData.subdomain[0]}}</li>
+        <li class="text-muted" *ngIf="!myData.subdomain[1]"><i class=" fa-li fa fa-times"></i>{{myData.subdomain[0]}}</li>
+        <li *ngIf="myData.status_reports[1]"><i class=" fa-li fa fa-check" ></i>{{myData.status_reports[0]}}</li>
+        <li class="text-muted" *ngIf="!myData.status_reports[1]"><i class="fa-li fa fa-times"></i>{{myData.status_reports[0]}}</li>
+        
+        
+      </ul>
+      <div class="d-grid">
+        <a href="#" class="btn btn-primary text-uppercase">Button</a>
+      </div>
+</div>
+</div>
+
